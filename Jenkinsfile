@@ -6,11 +6,12 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-           }
+
+         stage ("Checkout") {
+            git branch: 'main',
+            url: 'https://github.com/L00088572/JenkinsAssignment.git'
         }
+
         stage('Test') {
             steps {
               echo 'Testing..'
