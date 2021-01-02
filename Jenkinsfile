@@ -17,13 +17,13 @@ pipeline {
 
         stage('Build Code') {
             steps {
-              bat 'mvn -f pom.xml clean install'
+              bat 'mvn -f app/pom.xml clean install'
             }
         }
 
         stage('Run Tests') {
             steps {
-              bat 'mvn -f pom.xml test'
+              bat 'mvn -f app/pom.xml test'
             }
         }
     }
